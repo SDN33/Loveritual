@@ -5,10 +5,10 @@ interface SeparatorProps {
 
 export default function Separator({ variant, color }: SeparatorProps) {
   return (
-    <div className="separator-container">
+    <div className="separator-container w-full overflow-hidden">
       {variant === 'wave' && (
         <svg 
-          className="w-full h-24 -mt-1" 
+          className="w-full h-24 -mt-1 block" 
           viewBox="0 0 1440 96" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ export default function Separator({ variant, color }: SeparatorProps) {
       
       {variant === 'diagonal' && (
         <svg 
-          className="w-full h-24 -mt-1" 
+          className="w-full h-24 -mt-1 block" 
           viewBox="0 0 1440 96" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ export default function Separator({ variant, color }: SeparatorProps) {
       
       {variant === 'curve' && (
         <svg 
-          className="w-full h-24 -mt-1" 
+          className="w-full h-24 -mt-1 block" 
           viewBox="0 0 1440 96" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"

@@ -9,17 +9,30 @@ export default function Home() {
     <main>
       <Hero />
       
-      <Separator variant="wave" color="#FFF8FA" />
+      {/* Séparateur entre Hero et HowItWorks */}
+      <div className="relative z-10">
+        <Separator variant="wave" color="#FFF8FA" />
+      </div>
       
       <HowItWorks />
       
-      <Separator variant="diagonal" color="white" />
-      
-      <div className='-mt-18'>
-        <Pricing />
+      {/* Séparateur entre HowItWorks et Pricing */}
+      <div className="relative z-10">
+        <Separator 
+          variant="diagonal" 
+          color="#FFF8FA" 
+        />
       </div>
       
-      <Separator variant="curve" color="white" />
+      <Pricing />
+      
+      {/* Séparateur entre Pricing et Testimonials */}
+      <div className="relative z-10">
+        <Separator 
+          variant="curve" 
+          color="#FFF8FA" 
+        />
+      </div>
       
       <Testimonials />
     </main>
