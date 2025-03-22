@@ -7,7 +7,7 @@ export default function Blog() {
       title: "5 activités pour raviver la flamme dans votre couple",
       excerpt: "Découvrez des idées simples mais efficaces pour retrouver la complicité des premiers jours.",
       date: "15 mars 2025",
-      image: "/images/blog-1.jpg",
+      image: "/images/votre-couple-va-t-il-durer-les-15-questions-a-se-poser-pour-le-decouvrir.webp",
       slug: "raviver-la-flamme"
     },
     {
@@ -15,7 +15,8 @@ export default function Blog() {
       title: "L'importance de la communication dans le couple",
       excerpt: "Comment une communication saine peut transformer votre relation et renforcer vos liens.",
       date: "2 mars 2025",
-      image: "/images/blog-2.jpg",
+      image: "/images/hero-couple.webp",             
+
       slug: "importance-communication"
     },
     {
@@ -23,7 +24,7 @@ export default function Blog() {
       title: "Les rituels quotidiens qui renforcent les relations",
       excerpt: "Ces petites habitudes qui font toute la différence dans votre vie de couple.",
       date: "18 février 2025",
-      image: "/images/blog-3.jpg",
+      image: "/images/hero-couple2.webp",
       slug: "rituels-quotidiens"
     },
     {
@@ -31,7 +32,7 @@ export default function Blog() {
       title: "Comment gérer les conflits dans le couple",
       excerpt: "Des techniques efficaces pour résoudre les désaccords et renforcer votre relation.",
       date: "5 février 2025",
-      image: "/images/blog-4.jpg",
+      image: "/images/couple-crisis-what-are-the-warning-signs-and-when-to-contact-a-specialist.webp",
       slug: "gerer-conflits"
     },
   ];
