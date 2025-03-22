@@ -40,7 +40,7 @@ export default function Footer() {
                 alt="LoveRitual Logo"
                 width={150}
                 height={40}
-                className="h-10 w-auto"
+                className="h-10 w-auto rounded-xl"
               />
             </Link>
             <p className="text-white/80 mb-6">
