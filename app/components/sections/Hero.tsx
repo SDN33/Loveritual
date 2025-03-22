@@ -1,75 +1,110 @@
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Hero() {
-  // Utiliser une photo aléatoire de Unsplash pour le fond
-  const randomHeroImage = "./images/hero-bg.webp";
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-[#F2C4CE] to-white pt-20">
-      <div className="absolute inset-0 overflow-hidden">
-        <Image
-          src={randomHeroImage}
-          alt="Couple déballant une box LoveRitual"
-          fill
-          className="object-cover opacity-20"
-          priority
-          unoptimized // Pour permettre l'utilisation d'URLs externes
-        />
+    <section className="relative pt-20 pb-16 md:pb-24 px-4 overflow-hidden">
+      {/* Fond décoratif */}
+      <div className="absolute inset-0 -z-10 bg-[#FFF8FA]">
+        <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#FFE4EF] opacity-60 blur-3xl"></div>
+        <div className="absolute top-1/2 -left-24 w-96 h-96 rounded-full bg-[#FFE4EF] opacity-60 blur-3xl"></div>
       </div>
-      
-      <div className="relative container mx-auto px-4 pt-32 pb-16 text-center">
-        <div className="absolute top-8 right-8 bg-[#7D0633] text-white rounded-full py-2 px-6 transform rotate-3">
-          <p className="text-lg font-semibold">-50% sur votre première box</p>
-        </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-[#7D0633] mb-6">
-          Ravivez votre flamme chaque mois
-        </h1>
+      <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
+        {/* Contenu texte */}
+        <div className="text-center md:text-left">
+          <motion.h1 
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#7D0633] mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Ravivez la flamme dans votre couple
+          </motion.h1>
+          
+          <motion.p 
+            className="text-xl text-gray-600 mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Recevez chaque mois une box surprise conçue pour renforcer votre complicité et créer des moments d&apos;intimité inoubliables.
+          </motion.p>
+          
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <a 
+              href="#pricing" 
+              className="btn-primary"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Découvrir nos formules
+              <motion.span
+                initial={{ width: 0 }}
+                animate={{ width: isHovered ? "100%" : 0 }}
+                transition={{ duration: 0.3 }}
+                className="absolute bottom-0 left-0 h-1 bg-white"
+              />
+            </a>
+            <a href="#how-it-works" className="btn-secondary">Comment ça marche</a>
+          </motion.div>
+        </div>
         
-        <p className="text-xl md:text-2xl text-gray-800 mb-8 max-w-3xl mx-auto">
-          Des box personnalisées livrées à votre porte pour créer des moments inoubliables à deux
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Link 
-            href="/inscription"
-            className="btn-primary text-lg px-8 py-4 shadow-lg transform hover:scale-105 transition-all"
-          >
-            Commencez votre rituel d'amour
-          </Link>
-          <Link 
-            href="/comment-ca-marche"
-            className="btn-secondary text-lg"
-          >
-            Découvrir comment ça marche
-          </Link>
-        </div>
-
-        <div className="text-center">
-          <p className="text-gray-600 font-medium">
-            Déjà plus de 10 000 couples conquis
-          </p>
-          <div className="flex justify-center gap-4 mt-4">
-            <div className="flex -space-x-4">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="w-10 h-10 rounded-full border-2 border-white overflow-hidden"
-                >
-                  <Image 
-                    src={`https://source.unsplash.com/random/40x40/?face,portrait&sig=${i}`}
-                    alt={`Utilisateur ${i}`}
-                    width={40}
-                    height={40}
-                    unoptimized
-                  />
-                </div>
-              ))}
-            </div>
+        {/* Image hero */}
+        <motion.div 
+          className="relative"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="relative h-[400px] md:h-[500px] shadow-xl rounded-lg overflow-hidden">
+            <Image 
+              src="/images/hero-couple.jpg" 
+              alt="Couple ouvrant une Love Ritual Box" 
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
-        </div>
+          
+          {/* Badge flottant */}
+          <motion.div 
+            className="absolute -top-6 -right-6 md:top-10 md:-right-12 bg-white p-3 rounded-lg shadow-lg"
+            initial={{ x: 20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+          >
+            <p className="text-[#7D0633] font-bold">
+              <span className="block text-3xl">+2000</span>
+              <span className="text-sm">couples épanouis</span>
+            </p>
+          </motion.div>
+          
+          {/* Badge flottant */}
+          <motion.div 
+            className="absolute -bottom-6 -left-6 md:bottom-10 md:-left-12 bg-white p-3 rounded-lg shadow-lg"
+            initial={{ x: -20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+          >
+            <div className="flex items-center">
+              <span className="text-yellow-400 text-xl mr-1">★★★★★</span>
+              <span className="text-sm font-bold">4.9/5</span>
+            </div>
+            <p className="text-xs text-gray-600">basé sur 327 avis</p>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -15,15 +15,15 @@ export default function CommentCaMarche() {
       <HowItWorks />
       
       {/* Contenu spécifique supplémentaire pour cette page */}
-      <section className="py-20 bg-white text-center">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#7D0633] mb-8">
             Vous avez des questions ?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            N'hésitez pas à consulter notre FAQ ou à nous contacter directement.
+            N&apos;hésitez pas à consulter notre FAQ ou à nous contacter directement.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-4">
             <a href="/faq" className="btn-secondary">
               Voir la FAQ
             </a>

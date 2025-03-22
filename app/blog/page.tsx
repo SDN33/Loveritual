@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Blog() {
   const articles = [
     {
@@ -41,13 +43,20 @@ export default function Blog() {
           Blog LoveRitual
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-16 text-center">
-          Conseils, astuces et inspiration pour votre vie de couple
+          Conseils, astuces et inspirations pour enrichir votre vie de couple
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map(article => (
             <div key={article.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img src={article.image} alt={article.title} className="w-full h-48 object-cover" />
+              <div className="aspect-w-16 aspect-h-9 bg-gray-200 relative h-48">
+                <Image 
+                  src={article.image} 
+                  alt={article.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="p-6">
                 <p className="text-sm text-gray-500 mb-2">{article.date}</p>
                 <h3 className="text-xl font-bold text-[#7D0633] mb-2">{article.title}</h3>
