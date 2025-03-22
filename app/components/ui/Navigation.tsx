@@ -34,9 +34,9 @@ export default function Navigation() {
           {/* Logo */}
             <Link href="/" className="flex items-center">
             <img 
-              src="/images/logo/téléchargement.svg" 
+              src="/images/logo.png" 
               alt="LoveRitual Logo" 
-              className="h-8 -mt-2"
+              className="h-12"
             />
             <span className="ml-2 text-2xl font-bold text-[#7D0633]">LoveRitual</span>
             </Link>
