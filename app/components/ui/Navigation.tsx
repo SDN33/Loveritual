@@ -32,9 +32,14 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-[#7D0633]">
-            LoveRitual
-          </Link>
+            <Link href="/" className="flex items-center">
+            <img 
+              src="/images/logo/téléchargement.svg" 
+              alt="LoveRitual Logo" 
+              className="h-8 -mt-2"
+            />
+            <span className="ml-2 text-2xl font-bold text-[#7D0633]">LoveRitual</span>
+            </Link>
 
           {/* Navigation desktop */}
           <nav className="hidden md:flex space-x-6">
