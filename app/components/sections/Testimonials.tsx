@@ -11,20 +11,37 @@ export default function Testimonials() {
     {
       name: "Marie & Thomas",
       position: "Abonnés depuis 1 an",
-      image: "/images/testimonial-1.jpg",
+      icon: "👩‍❤️‍👨",
+      iconBg: "#FFE4EF",
       quote: "LoveRitual a transformé notre façon de passer du temps ensemble. Chaque box est une surprise qui nous fait sortir de notre routine."
     },
     {
       name: "Sophie & Lucas",
       position: "Abonnés depuis 6 mois",
-      image: "/images/testimonial-2.jpg",
+      icon: "👩‍❤️‍💋‍👨",
+      iconBg: "#F0F8FF",
       quote: "Nous attendons notre box avec impatience chaque mois. Les activités sont toujours originales et adaptées à notre couple."
     },
     {
       name: "Emma & Julien",
       position: "Abonnés depuis 3 mois",
-      image: "/images/testimonial-3.jpg",
+      icon: "👫",
+      iconBg: "#F0FFF4",
       quote: "Ces box nous ont aidés à redécouvrir notre complicité après la naissance de notre enfant. Un vrai moment pour nous retrouver."
+    },
+    {
+      name: "Alex & Sam",
+      position: "Abonnés depuis 8 mois",
+      icon: "👩‍❤️‍👩",
+      iconBg: "#FFF0F5",
+      quote: "Les box LoveRitual sont inclusives et parfaitement adaptées à tous les couples. Une découverte mensuelle que nous adorons partager."
+    },
+    {
+      name: "Mathieu & Kevin",
+      position: "Abonnés depuis 4 mois",
+      icon: "👨‍❤️‍👨",
+      iconBg: "#F5F0FF",
+      quote: "Des moments de qualité garantis chaque mois. LoveRitual nous aide à créer des souvenirs précieux dans notre relation."
     }
   ];
 
@@ -58,13 +75,11 @@ export default function Testimonials() {
             className="bg-[#FFF8FA] p-8 rounded-lg shadow-md"
           >
             <div className="flex flex-col md:flex-row gap-6 items-center">
-              <div className="w-24 h-24 rounded-full overflow-hidden relative flex-shrink-0">
-                <Image
-                  src={testimonials[activeIndex].image}
-                  alt={testimonials[activeIndex].name}
-                  fill
-                  className="object-cover"
-                />
+              <div 
+                className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center text-4xl"
+                style={{ backgroundColor: testimonials[activeIndex].iconBg }}
+              >
+                {testimonials[activeIndex].icon}
               </div>
               <div>
                 <div className="text-yellow-400 text-xl mb-4">★★★★★</div>
