@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles below */
+
+:root {
+  --color-primary: #7D0633;
+  --color-secondary: #F2C4CE;
+  --color-white: #FFFFFF;
+  --color-gold: #D4AF37;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+  }
+
+  body {
+    font-family: var(--font-montserrat);
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#7D0633] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300;
+  }
+  .btn-primary:hover {
+    @apply bg-opacity-90;
+  }
+
+  .btn-secondary {
+    @apply bg-[#F2C4CE] text-[#7D0633] px-6 py-3 rounded-full font-semibold transition-all duration-300;
+  }
+  .btn-secondary:hover {
+    @apply bg-opacity-90;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
