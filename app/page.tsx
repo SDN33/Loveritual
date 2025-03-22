@@ -8,7 +8,9 @@ export default function Home() {
     <main>
       <Hero />
       <HowItWorks />
-      <Pricing />
+      <div className='-mt-18'>
+        <Pricing />
+      </div>     
       <Testimonials />
     </main>
   );

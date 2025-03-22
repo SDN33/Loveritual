@@ -3,7 +3,7 @@ import { CheckIcon } from '@heroicons/react/24/solid';
 const plans = [
   {
     name: "Rituel Découverte",
-    price: "39,90",
+    price: "19,90",
     description: "Idéal pour les couples qui débutent ou les relations récentes",
     features: [
       "Box d'introduction axée sur les jeux de société",
@@ -17,7 +17,7 @@ const plans = [
   },
   {
     name: "Rituel Passion",
-    price: "59,90",
+    price: "39,90",
     description: "Notre formule la plus populaire avec un mélange équilibré",
     features: [
       "Jeux de couple exclusifs",
@@ -31,7 +31,7 @@ const plans = [
   },
   {
     name: "Rituel Intense",
-    price: "79,90",
+    price: "59,90",
     description: "Pour les couples qui veulent une expérience premium",
     features: [
       "Accessoires haut de gamme",
