@@ -1,44 +1,44 @@
 export default function FAQ() {
-  const faqs = [
+  const faqItems = [
     {
-      id: 1,
-      question: "Comment fonctionne l'abonnement LoveRitual ?",
-      answer: "L'abonnement LoveRitual est un service de box mensuelles livrées directement chez vous. Chaque mois, vous recevez une box thématique contenant des articles soigneusement sélectionnés pour vous aider à créer des moments de complicité en couple. Vous pouvez choisir entre plusieurs formules d'abonnement selon vos préférences et votre budget."
+      question: "Comment fonctionne l'abonnement à LoveRitual ?",
+      answer: "LoveRitual est un service d'abonnement mensuel. Après votre inscription, vous recevrez chaque mois une box thématique contenant des activités, des produits et des conseils pour enrichir votre vie de couple. Vous pouvez choisir entre plusieurs formules selon vos préférences et votre budget."
     },
     {
-      id: 2,
-      question: "Puis-je annuler mon abonnement à tout moment ?",
-      answer: "Oui, vous pouvez annuler votre abonnement à tout moment depuis votre espace client. L'annulation prendra effet après la période en cours pour laquelle vous avez déjà payé. Vous continuerez à recevoir les box jusqu'à la fin de cette période."
-    },
-    {
-      id: 3,
       question: "Quand ma box sera-t-elle livrée ?",
-      answer: "Les box sont expédiées entre le 1er et le 5 de chaque mois. Le délai de livraison dépend de votre localisation, mais généralement, vous recevrez votre box entre le 5 et le 10 du mois. Vous recevrez un email avec un numéro de suivi dès que votre box sera expédiée."
+      answer: "Les box LoveRitual sont expédiées entre le 1er et le 5 de chaque mois. Le délai de livraison est généralement de 2 à 5 jours ouvrés selon votre localisation."
     },
     {
-      id: 4,
-      question: "Les produits sont-ils adaptés à tous les types de couples ?",
-      answer: "Oui, nous concevons nos box pour qu'elles soient inclusives et adaptées à tous les couples, quels que soient leur orientation, leur identité ou leurs préférences. Nous accordons une attention particulière à proposer des expériences qui répondent aux besoins de tous nos abonnés."
+      question: "Puis-je offrir LoveRitual en cadeau ?",
+      answer: "Absolument ! LoveRitual est un cadeau parfait pour un couple ami, des jeunes mariés ou pour célébrer un anniversaire de relation. Vous pouvez choisir entre différentes durées d'abonnement cadeau (3, 6 ou 12 mois) dans notre section 'Offrir'."
     },
     {
-      id: 5,
-      question: "Puis-je offrir un abonnement LoveRitual en cadeau ?",
-      answer: "Absolument ! Les abonnements LoveRitual font d'excellents cadeaux pour les anniversaires, la Saint-Valentin ou toute autre occasion. Vous pouvez choisir la durée de l'abonnement-cadeau (3, 6 ou 12 mois) et nous nous occupons du reste. Le bénéficiaire recevra un email l'informant de votre cadeau, avec toutes les informations nécessaires pour activer son abonnement."
+      question: "Comment puis-je modifier ou annuler mon abonnement ?",
+      answer: "Vous pouvez gérer facilement votre abonnement depuis votre espace client. L'annulation est possible à tout moment et prendra effet à la fin de la période en cours. Pour modifier votre formule, rendez-vous dans la section 'Mon abonnement' de votre compte."
     },
     {
-      id: 6,
-      question: "Les produits inclus dans les box sont-ils de qualité ?",
-      answer: "La qualité est l'une de nos priorités. Nous sélectionnons soigneusement chaque produit inclus dans nos box, en privilégiant des marques reconnues et des artisans talentueux. Tous les produits sont testés par notre équipe avant d'être inclus dans nos box."
+      question: "Les box sont-elles adaptées à tous les couples ?",
+      answer: "Oui ! Nos box sont conçues pour s'adapter à la diversité des couples, quels que soient leur âge, leur orientation ou la durée de leur relation. Nous veillons à proposer des activités inclusives et adaptables selon vos préférences et votre confort."
     },
     {
-      id: 7,
-      question: "Puis-je connaître le contenu de la box avant de la recevoir ?",
-      answer: "Le principe de LoveRitual est de vous surprendre chaque mois avec une nouvelle thématique et de nouveaux produits. Le contenu exact de la box reste donc secret jusqu'à sa réception. Cependant, nous partageons quelques indices sur les réseaux sociaux pour vous mettre l'eau à la bouche !"
+      question: "Que contient une box LoveRitual typique ?",
+      answer: "Chaque box contient généralement : 1-2 activités à réaliser ensemble, des produits en lien avec le thème du mois (bien-être, jeux, décoration, gourmandises...), un guide d'accompagnement avec des conseils et des suggestions, et parfois des surprises exclusives."
     },
     {
-      id: 8,
-      question: "Que faire si je ne suis pas satisfait(e) d'un produit ?",
-      answer: "Votre satisfaction est notre priorité. Si vous n'êtes pas satisfait(e) d'un produit, contactez notre service client dans les 14 jours suivant la réception de votre box. Nous ferons notre possible pour trouver une solution adaptée à votre situation."
+      question: "Comment sont choisis les produits dans les box ?",
+      answer: "Nous sélectionnons avec soin des produits de qualité, si possible fabriqués en France ou en Europe, et nous favorisons les marques éthiques et durables. Chaque élément est choisi pour sa pertinence avec le thème du mois et sa capacité à créer une expérience enrichissante pour le couple."
+    },
+    {
+      question: "Est-il possible de personnaliser ma box ?",
+      answer: "Avec notre formule Premium, vous pouvez accéder à certaines options de personnalisation. Vous pouvez également remplir votre profil de préférences lors de votre inscription pour nous aider à adapter au mieux le contenu de vos box."
+    },
+    {
+      question: "Livrez-vous à l'international ?",
+      answer: "Actuellement, nous livrons en France métropolitaine, en Belgique, au Luxembourg et en Suisse. Nous travaillons à étendre notre service à d'autres pays européens prochainement."
+    },
+    {
+      question: "Que faire si je ne suis pas satisfait de ma box ?",
+      answer: "Votre satisfaction est notre priorité. Si vous n'êtes pas pleinement satisfait de votre box, contactez notre service client dans les 14 jours suivant la réception. Nous ferons notre possible pour trouver une solution adaptée."
     }
   ];
 
@@ -46,31 +46,39 @@ export default function FAQ() {
     <main className="pt-20">
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl md:text-5xl font-bold text-[#7D0633] mb-8 text-center">
-          Foire aux questions
+          Questions fréquentes
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-16 text-center">
-          Vous avez des questions ? Nous avons les réponses !
+          Tout ce que vous devez savoir sur LoveRitual
         </p>
         
         <div className="max-w-4xl mx-auto">
           <div className="space-y-6">
-            {faqs.map(faq => (
-              <div key={faq.id} className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#7D0633] mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
+            {faqItems.map((item, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+                <details className="group">
+                  <summary className="flex justify-between items-center p-6 cursor-pointer font-medium text-[#7D0633]">
+                    {item.question}
+                    <span className="transition-transform group-open:rotate-180">
+                      ▼
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-700">
+                    <p>{item.answer}</p>
+                  </div>
+                </details>
               </div>
             ))}
           </div>
           
-          <div className="mt-12 bg-gray-50 p-8 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-[#7D0633] mb-4">Vous n'avez pas trouvé votre réponse ?</h2>
+          <div className="mt-16 text-center">
+            <h2 className="text-2xl font-bold text-[#7D0633] mb-4">
+              Vous ne trouvez pas la réponse à votre question ?
+            </h2>
             <p className="text-gray-600 mb-6">
-              N'hésitez pas à contacter notre équipe, nous serons ravis de vous aider !
+              Notre équipe est à votre disposition pour vous aider.
             </p>
-            <a 
-              href="/contact" 
-              className="inline-block bg-[#7D0633] text-white px-6 py-3 rounded-lg hover:bg-[#9A0E48] transition duration-300"
-            >
+            <a href="/contact" className="bg-[#7D0633] text-white px-6 py-3 rounded-lg inline-block hover:bg-[#66052A] transition-colors">
               Contactez-nous
             </a>
           </div>
