@@ -35,6 +35,15 @@ export default function Home() {
       </div>
       
       <Testimonials />
+
+      {/* Séparateur entre Testimonials et Blog */}
+      <div className="relative z-10">
+        <Separator
+          variant="wave"
+          color="#FFF8FA"
+        />
+      </div>
+
     </main>
   );
 }
