@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Image from 'next/image';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,14 +23,6 @@ export default function Navigation() {
     setIsOpen(!isOpen);
   };
 
-  const menuItems = [
-    { href: '/comment-ca-marche', label: 'Comment ça marche' },
-    { href: '/formules', label: 'Nos formules' },
-    { href: '/exemples', label: 'Exemples de box' },
-    { href: '/temoignages', label: 'Témoignages' },
-    { href: '/blog', label: 'Blog' },
-  ];
-
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -41,27 +32,42 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo.png"
-              alt="LoveRitual Logo"
-              width={150}
-              height={40}
-              className="h-20 w-auto"
-            />
+          <Link href="/" className="text-2xl font-bold text-[#7D0633]">
+            LoveRitual
           </Link>
 
           {/* Navigation desktop */}
           <nav className="hidden md:flex space-x-6">
-            {menuItems.map((item) => (
-              <Link 
-                key={item.href}
-                href={item.href}
-                className="text-gray-700 hover:text-[#7D0633] transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
+            <Link 
+              href="/comment-ca-marche" 
+              className="text-gray-700 hover:text-[#7D0633] transition-colors"
+            >
+              Comment ça marche
+            </Link>
+            <Link 
+              href="/formules" 
+              className="text-gray-700 hover:text-[#7D0633] transition-colors"
+            >
+              Formules
+            </Link>
+            <Link 
+              href="/exemples" 
+              className="text-gray-700 hover:text-[#7D0633] transition-colors"
+            >
+              Exemples
+            </Link>
+            <Link 
+              href="/temoignages" 
+              className="text-gray-700 hover:text-[#7D0633] transition-colors"
+            >
+              Témoignages
+            </Link>
+            <Link 
+              href="/blog" 
+              className="text-gray-700 hover:text-[#7D0633] transition-colors"
+            >
+              Blog
+            </Link>
           </nav>
 
           {/* Boutons d'action */}
@@ -70,13 +76,13 @@ export default function Navigation() {
               href="/connexion" 
               className="text-gray-700 hover:text-[#7D0633] transition-colors"
             >
-              Connexion
+              Se connecter
             </Link>
             <Link 
               href="/inscription" 
               className="bg-[#7D0633] text-white px-4 py-2 rounded-lg hover:bg-[#66052A] transition-colors"
             >
-              S'inscrire
+              S&apos;inscrire
             </Link>
           </div>
 
@@ -109,30 +115,55 @@ export default function Navigation() {
           >
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-4">
-                {menuItems.map((item) => (
-                  <Link 
-                    key={item.href}
-                    href={item.href}
-                    className="text-gray-700 hover:text-[#7D0633] transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                <Link 
+                  href="/comment-ca-marche" 
+                  className="text-gray-700 hover:text-[#7D0633] transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Comment ça marche
+                </Link>
+                <Link 
+                  href="/formules" 
+                  className="text-gray-700 hover:text-[#7D0633] transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Formules
+                </Link>
+                <Link 
+                  href="/exemples" 
+                  className="text-gray-700 hover:text-[#7D0633] transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Exemples
+                </Link>
+                <Link 
+                  href="/temoignages" 
+                  className="text-gray-700 hover:text-[#7D0633] transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Témoignages
+                </Link>
+                <Link 
+                  href="/blog" 
+                  className="text-gray-700 hover:text-[#7D0633] transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Blog
+                </Link>
                 <div className="pt-4 flex flex-col space-y-2">
                   <Link 
                     href="/connexion" 
                     className="text-gray-700 hover:text-[#7D0633] transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
-                    Connexion
+                    Se connecter
                   </Link>
                   <Link 
                     href="/inscription" 
                     className="bg-[#7D0633] text-white px-4 py-2 rounded-lg hover:bg-[#66052A] transition-colors inline-block text-center"
                     onClick={() => setIsOpen(false)}
                   >
-                    S'inscrire
+                    S&apos;inscrire
                   </Link>
                 </div>
               </nav>

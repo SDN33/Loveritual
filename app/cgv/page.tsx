@@ -16,8 +16,8 @@ export default function CGV() {
               Les présentes conditions générales de vente (CGV) sont conclues entre :
             </p>
             <ul>
-              <li>La société LoveRitual SAS, au capital de 50 000 euros, immatriculée au RCS de Paris sous le numéro 123 456 789, dont le siège social est situé au 123 Avenue de l&apos;Amour, 75011 Paris, France, ci-après dénommée "LoveRitual" ou "nous"</li>
-              <li>Et toute personne physique ou morale souhaitant procéder à un achat sur le site Internet loveritual.fr, ci-après dénommée "le Client" ou "vous"</li>
+              <li>La société LoveRitual SAS, au capital de 50 000 euros, immatriculée au RCS de Paris sous le numéro 123 456 789, dont le siège social est situé au 123 Avenue de l&apos;Amour, 75011 Paris, France, ci-après dénommée &quot;LoveRitual&quot; ou &quot;nous&quot;</li>
+              <li>Et toute personne physique ou morale souhaitant procéder à un achat sur le site Internet loveritual.fr, ci-après dénommée &quot;le Client&quot; ou &quot;vous&quot;</li>
             </ul>
             
             <h3>Article 1 - Objet et champ d&apos;application</h3>
