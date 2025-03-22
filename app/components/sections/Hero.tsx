@@ -69,7 +69,7 @@ export default function Hero() {
         >
             <div className="relative h-[400px] md:h-[400px] shadow-xl rounded-lg overflow-hidden">
             <Image 
-              src="/images/hero-couple.webp" 
+              src="/images/hero-couple2.webp" 
               alt="Couple ouvrant une Love Ritual Box" 
               fill
               className="object-cover"

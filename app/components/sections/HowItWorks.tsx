@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function HowItWorks() {
+  const pathname = usePathname();
+  
   const steps = [
     {
       icon: "📝",
@@ -72,9 +75,9 @@ export default function HowItWorks() {
               <p className="text-gray-600">
                 {step.description}
               </p>
-                <div className="mb-4 text-gray-600 text-lg font-bold">
+              <div className="mt-4 text-gray-600 text-lg font-bold">
                 Étape {index + 1}
-                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -83,7 +86,7 @@ export default function HowItWorks() {
           <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
             Chaque box est conçue par nos experts pour vous offrir une expérience unique et renforcer votre relation de couple. <br/><br/><span className="text-base text-[#7D0633]">C&apos;est simple, surprenant et toujours renouvelé !</span>
           </p>
-            {window.location.pathname !== '/' && (
+            {pathname !== '/' && (
             <a href="#pricing" className="btn-primary">
               Découvrir nos formules
             </a>
