@@ -1,77 +1,93 @@
-import Image from 'next/image';
+"use client";
 
-const steps = [
-  {
-    title: "Personnalisez votre box",
-    description: "Répondez à quelques questions pour nous permettre de créer une box parfaitement adaptée à vos goûts et envies.",
-    icon: "🎯"
-  },
-  {
-    title: "Recevez votre box mensuelle",
-    description: "Chaque mois, recevez une box surprise soigneusement sélectionnée, livrée directement à votre porte dans un packaging discret.",
-    icon: "📦"
-  },
-  {
-    title: "Vivez des moments magiques",
-    description: "Découvrez ensemble le contenu de votre box et créez des moments inoubliables à deux.",
-    icon: "✨"
-  }
-];
+import { motion } from "framer-motion";
 
 export default function HowItWorks() {
+  const steps = [
+    {
+      icon: "📝",
+      title: "Abonnez-vous",
+      description: "Choisissez la formule qui correspond à vos envies et à votre budget"
+    },
+    {
+      icon: "📦",
+      title: "Recevez votre box",
+      description: "Chaque mois, découvrez une box thématique livrée directement chez vous"
+    },
+    {
+      icon: "💑",
+      title: "Partagez des moments à deux",
+      description: "Profitez des activités et des produits soigneusement sélectionnés"
+    },
+    {
+      icon: "❤️",
+      title: "Renforcez votre lien",
+      description: "Créez de nouvelles habitudes et renouvelez votre complicité"
+    }
+  ];
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
   return (
-    <section className="py-20 bg-white">
+    <section id="how-it-works" className="py-16 bg-[#FFF8FA]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#7D0633] mb-4">
-            Comment ça marche ?
+          <h2 className="text-3xl md:text-4xl font-bold text-[#7D0633] mb-6">
+            Comment fonctionne LoveRitual ?
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            En trois étapes simples, commencez votre voyage vers une relation plus épanouie
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Quelques étapes simples pour transformer votre relation
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {steps.map((step, index) => (
-            <div
-              key={index}
-              className="text-center p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-shadow"
+            <motion.div 
+              key={index} 
+              className="bg-white p-8 rounded-lg shadow-md text-center"
+              variants={itemVariants}
             >
-              <div className="w-20 h-20 mx-auto mb-6 bg-[#F2C4CE] rounded-full flex items-center justify-center text-4xl">
-                {step.icon}
-              </div>
-              <h3 className="text-2xl font-bold text-[#7D0633] mb-4">
+              <div className="text-5xl mb-4">{step.icon}</div>
+              <h3 className="text-xl font-bold text-[#7D0633] mb-2">
                 {step.title}
               </h3>
               <p className="text-gray-600">
                 {step.description}
               </p>
-            </div>
+              <div className="mt-6 text-gray-400 text-lg font-bold">
+                Étape {index + 1}
+              </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <div className="mt-16 text-center">
-          <a
-            href="/inscription"
-            className="btn-primary text-lg inline-flex items-center gap-2"
-          >
-            Commencer l'aventure
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+            Chaque box est conçue par nos experts pour vous offrir une expérience unique et renforcer votre relation de couple. C&apos;est simple, surprenant et toujours renouvelé !
+          </p>
+          <a href="#pricing" className="btn-primary">
+            Découvrir nos formules
           </a>
         </div>
       </div>
     </section>
   );
-} 
+}

@@ -17,28 +17,24 @@
   }
 
   body {
-    font-family: var(--font-montserrat);
+    font-family: 'Inter', sans-serif;
     @apply bg-white text-gray-900;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-[#7D0633] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300;
+    @apply inline-block px-6 py-3 bg-[#7D0633] text-white rounded-lg font-medium hover:bg-[#66052A] transition-colors relative overflow-hidden;
   }
-  .btn-primary:hover {
-    @apply bg-opacity-90;
-  }
-
+  
   .btn-secondary {
-    @apply bg-[#F2C4CE] text-[#7D0633] px-6 py-3 rounded-full font-semibold transition-all duration-300;
-  }
-  .btn-secondary:hover {
-    @apply bg-opacity-90;
+    @apply inline-block px-6 py-3 bg-white text-[#7D0633] border border-[#7D0633] rounded-lg font-medium hover:bg-[#FFF8FA] transition-colors;
   }
 
   .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
+
+/* Vous pouvez ajouter d'autres styles globaux ici */
 
