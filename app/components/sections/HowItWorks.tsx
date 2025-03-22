@@ -16,7 +16,7 @@ export default function HowItWorks() {
     },
     {
       icon: "💑",
-      title: "Partagez des moments à deux",
+      title: "Pour des moments à 2",
       description: "Profitez des activités et des produits soigneusement sélectionnés"
     },
     {
@@ -72,9 +72,9 @@ export default function HowItWorks() {
               <p className="text-gray-600">
                 {step.description}
               </p>
-              <div className="mt-6 text-gray-400 text-lg font-bold">
+                <div className="mb-4 text-gray-400 text-lg font-bold">
                 Étape {index + 1}
-              </div>
+                </div>
             </motion.div>
           ))}
         </motion.div>

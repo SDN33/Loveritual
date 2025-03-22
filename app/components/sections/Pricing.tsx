@@ -47,7 +47,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-[#F2C4CE]/20">
+    <section id="pricing" className="py-20 bg-gradient-to-b from-white to-[#F2C4CE]/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#7D0633] mb-4">
@@ -139,4 +139,4 @@ export default function Pricing() {
       </div>
     </section>
   );
-} 
+}

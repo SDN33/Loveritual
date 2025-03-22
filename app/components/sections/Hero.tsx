@@ -43,7 +43,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <a 
-              href="#formules" 
+              href="#pricing" 
               className="btn-primary"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
