@@ -17,9 +17,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "LoveRitual - Ravivez votre flamme chaque mois",
-  description: "Des box personnalisées livrées à votre porte pour créer des moments inoubliables à deux. Découvrez nos box mensuelles pour couples.",
-  keywords: "box couple, abonnement couple, cadeau couple, love box, rituel amoureux",
+  title: "LoveRitual - Box mensuelles pour couples",
+  description: "Recevez chaque mois une box surprise conçue pour renforcer votre complicité et créer des moments d'intimité inoubliables.",
+  keywords: ["couple", "relation", "box", "intimité", "complicité"],
 };
 
 export default function RootLayout({

@@ -38,3 +38,8 @@
 
 /* Vous pouvez ajouter d'autres styles globaux ici */
 
+/* Autres styles personnalisés */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
