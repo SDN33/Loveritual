@@ -72,7 +72,7 @@ export default function HowItWorks() {
               <p className="text-gray-600">
                 {step.description}
               </p>
-                <div className="mb-4 text-yellow-500 text-lg font-bold">
+                <div className="mb-4 text-gray-600 text-lg font-bold">
                 Étape {index + 1}
                 </div>
             </motion.div>
@@ -81,11 +81,13 @@ export default function HowItWorks() {
 
         <div className="mt-16 text-center">
           <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-            Chaque box est conçue par nos experts pour vous offrir une expérience unique et renforcer votre relation de couple. <br/><br/>C&apos;est simple, surprenant et toujours renouvelé !
+            Chaque box est conçue par nos experts pour vous offrir une expérience unique et renforcer votre relation de couple. <br/><br/><span className="text-base text-[#7D0633]">C&apos;est simple, surprenant et toujours renouvelé !</span>
           </p>
-          <a href="#pricing" className="btn-primary">
-            Découvrir nos formules
-          </a>
+            {window.location.pathname !== '/' && (
+            <a href="#pricing" className="btn-primary">
+              Découvrir nos formules
+            </a>
+            )}
         </div>
       </div>
     </section>
